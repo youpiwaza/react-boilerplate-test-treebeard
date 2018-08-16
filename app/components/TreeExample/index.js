@@ -3,8 +3,10 @@
  *
  * @author       youpiwaza
  * @description  TreeBeard example componant
- * @see          https://github.com/storybooks/react-treebeard
- * @version      1
+ * @see          doc      / https://github.com/storybooks/react-treebeard
+ * @see          issue    / https://github.com/storybooks/react-treebeard/issues/100
+ * @see          sandbox  / https://codesandbox.io/s/Q5AE9vG0?module=OygDp
+ * @version      2
  */
 
 import PropTypes from 'prop-types';
@@ -25,6 +27,7 @@ customHeader.propTypes = {
 };
 
 // Create a separate instance of decorators
+// Use plugin base & update only what's necessary
 const modifiedDecorators = Object.assign({}, decorators, {
   Header: customHeader,
 });
