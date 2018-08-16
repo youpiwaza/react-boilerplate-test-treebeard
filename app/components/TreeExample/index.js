@@ -40,23 +40,33 @@ class TreeExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    // Mandatory to give access to TreeExample this.state
     this.onToggle = this.onToggle.bind(this);
   }
 
+  // params : Clicked/toggled node and his toggled state
   onToggle(node, toggled) {
+    // Remove active state on precedent cursor
     if (this.state.cursor) {
       this.state.cursor.active = false;
     }
 
-    const pute = node;
+    // linter > Avoid params reassign...
+    const datNode = node;
 
-    pute.active = true;
+    // Clicked node becomes active
+    datNode.active = true;
 
-    if (node.children) {
-      pute.toggled = toggled;
+    // If node have children, toggle it
+    // Not sure how the toggle effect if made tho
+    if (datNode.children) {
+      datNode.toggled = toggled;
     }
 
-    this.setState({ cursor: pute });
+    // Update state
+    this.setState({ cursor: datNode });
+
+    console.log(this.state);
   }
   render() {
     return <Treebeard data={data} onToggle={this.onToggle} />;
