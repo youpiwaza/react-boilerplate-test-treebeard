@@ -19,8 +19,9 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
-import H2 from 'components/H2';
+import H2 from 'components/H1';
 import TreeExample from 'components/TreeExample';
+// import TreeExampleWorkAround from 'components/TreeExampleWorkAround';
 import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
@@ -61,7 +62,7 @@ export class HomePage extends React.PureComponent {
             </p>
           </CenteredSection>
           <Section>
-            <H2>Test tree-beard</H2>
+            <h1>Test tree-beard / Broken because of data mutability</h1>
             <TreeExample />
           </Section>
         </div>

@@ -157,17 +157,17 @@ class TreeExample extends React.Component {
   render() {
     return (
       <div>
-        <h1>Tree without decorators</h1>
+        <h2>Tree without decorators</h2>
         <Treebeard data={data1} onToggle={this.handleToggleHOF('tree1')} />
 
-        <h1>Tree with decorator 1</h1>
+        <h2>Tree with decorator 1</h2>
         <Treebeard
           data={data2}
           decorators={modifiedDecorators}
           onToggle={this.handleToggleHOF('tree2')}
         />
 
-        <h1>Tree with decorator 2</h1>
+        <h2>Tree with decorator 2</h2>
         <Treebeard
           data={data3}
           decorators={modifiedDecorators2}
