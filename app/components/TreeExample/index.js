@@ -7,10 +7,27 @@
  * @version      1
  */
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 // import ReactDOM from 'react-dom';
-import { Treebeard } from 'react-treebeard';
+import { decorators, Treebeard } from 'react-treebeard';
+
 import data from './data.json';
+
+// Extract custom header to allow props validation
+const customHeader = props => (
+  <span style={props.style}>{props.node.name} lol</span>
+);
+customHeader.propTypes = {
+  node: PropTypes.any,
+  style: PropTypes.any,
+};
+
+// Create a separate instance of decorators
+const modifiedDecorators = Object.assign({}, decorators, {
+  Header: customHeader,
+});
 
 class TreeExample extends React.Component {
   constructor(props) {
@@ -45,7 +62,13 @@ class TreeExample extends React.Component {
     console.log(this.state);
   }
   render() {
-    return <Treebeard data={data} onToggle={this.onToggle} />;
+    return (
+      <Treebeard
+        data={data}
+        decorators={modifiedDecorators}
+        onToggle={this.onToggle}
+      />
+    );
   }
 }
 
