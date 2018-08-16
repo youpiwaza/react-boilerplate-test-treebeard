@@ -21,7 +21,7 @@ import {
 } from 'containers/App/selectors';
 import H2 from 'components/H1';
 import TreeExample from 'components/TreeExample';
-// import TreeExampleWorkAround from 'components/TreeExampleWorkAround';
+import TreeExampleWorkAround from 'components/TreeExampleWorkAround';
 import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
@@ -64,6 +64,8 @@ export class HomePage extends React.PureComponent {
           <Section>
             <h1>Test tree-beard / Broken because of data mutability</h1>
             <TreeExample />
+            <h1>tree-beard / workaround</h1>
+            <TreeExampleWorkAround />
           </Section>
         </div>
       </article>
