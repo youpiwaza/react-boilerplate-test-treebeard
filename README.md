@@ -1,3 +1,9 @@
+# DEPRECATED / react boilerplate + tabs react virtualized
+
+An old project not maintained, I renamed `package.json` to `package.json.old` to prevent depandabot alerts.
+
+Feel free to have a look around.
+
 <img src="https://raw.githubusercontent.com/react-boilerplate/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
 
 <br />
